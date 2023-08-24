@@ -8,6 +8,7 @@
 <body>
   
   <style>
+    /* background는 단지 이미지 넣는 용도 */
     /* box 크기와 배경 이미지 크기를 동일하게 맞춤 */
     .box1 {
       box-sizing: border-box;
@@ -47,13 +48,31 @@
       border: 1px solid gray;
       background-image: url(../../assets/image/light2.png);
       background-repeat: no-repeat;
-      background-size: contain; /* 이미지를 늘리거나 자르지 않고 최대한 크게 조정해서 표현하는 방식 */
+      background-size: cover; /* contain : 이미지를 늘리거나 자르지 않고 최대한 크게 조정해서 표현하는 방식 */
+                              /* cover   : 너비/높이 중 작은 부분을 최대한 여백 없이(늘리거나 줄임) 표시하고 box 밖으로 나간 부분은 자름 */
       background-position: center;
       }
   
 
   </style>
   <div class="box3"></div>
+
+  <hr>
+
+  <style>
+    /* 이미지의 일부만 표시하기 */
+    .box4{
+      box-sizing: border-box;
+      width: 120px;
+      height: 95px;
+      background-image: url(../../assets/image/logo.png);
+      background-position: -1180px -180px;   /*가로 세로순 , -145px: 배경이 왼쪽으로 145px 이동 */
+    }
+
+  </style>
+  <div class="box4">
+
+  </div>
 
 </body>
 </html>
