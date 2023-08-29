@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보수정</title>
+</head>
+<body>
+  
+  <table>
+    <thead>
+      <tr></tr>
+    </thead>
+    <tbody>
+      <p>
+        <form action="login.html" method="get">
+      <tr>이메일&nbsp;&nbsp;</tr>
+      <tr><input type="text"> &nbsp;@&nbsp;</tr>
+      <tr>&nbsp;<input type="text" list="domain" placeholder="직접입력 또는 선택"></tr>
+      <datalist id="domain">
+        <option value="naver.com">naver.com</option>
+        <option value="kakao.com">kakao.com</option> 
+        <option value="gmail.com">gmail.com</option>
+      </datalist><br>
+      <tr>생일&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" maxlength="4" size="4">년</tr>&nbsp;
+      <tr><input type="text" maxlength="2" size="2">월&nbsp;</tr>
+      <tr><input type="text" maxlength="2" size="2">일&nbsp;</tr><br>
+
+      <tr>거주도시&nbsp;&nbsp;</tr>
+      <select name="city">
+      <option value="seoul" selected="selected">서울</option>
+      <option value="gwang">광주</option>
+      <option value="gu">대구</option>
+      <option value="jeon">대전</option>
+      <option value="san">부산</option>
+      <option value="ulsan">울산</option>
+      <option value="in">인천</option>
+      <option value="gita">기타</option>
+      </select>
+      
+      
+        <br>
+        <tr>성별&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tr>
+      <tr>
+        <input type="radio" name="gender" value="male" id="gender_male">
+        <label for="gender_male">남자</label>
+        <input type="radio" name="gender" value="female" id="gender_female">
+        <label for="gender_female">여자</label><br>  
+      </tr>
+        <tr>관심분야</tr>
+        <tr>
+        <input type="checkbox" name="travel" value="a" id="travel_a">
+        <label for="travel_a">여행</label>
+        <input type="checkbox" name="movie" value="b" id="movie_b">
+        <label for="movie_b">영화</label>
+        <input type="checkbox" name="read" value="c" id="read_c">
+        <label for="read_c">독서</label>
+        <input type="checkbox" name="music" value="d" id="music_d">
+        <label for="music_d">음악</label>
+        <input type="checkbox" name="indifferent" value="e" id="indifferent_e">
+        <label for="indifferent_e">관심없음</label>
+        </tr>
+        
+        <br>
+        
+         <p>
+         <textarea rows="5" cols="50"></textarea>
+         </p>
+         
+         
+             <button type="submit">수정완료</button>
+          </form>
+         </p>
+    </tbody>
+    <tfoot>
+      <tr></tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>
