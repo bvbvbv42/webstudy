@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+    * {
+      text-align: center;
+      box-sizing:border-box;
+      padding: 0;
+      margin: 0;
+      font-family: 'Malgun Gothic', sans-serif;
+      background-size: 460px;
+      }
+      a {
+        color: #000000;
+        
+      }
+      .good {
+        color: #0000FF;
+      }
+      .warning{
+        color: #FF0000;
+      }
+      body {
+        background-color: #F5F6F7;
+      }
+     
+
+      
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://www.gdu.co.kr/main/main.html">
+          <br>
+          <br>
+        <img src="https://www.gdu.co.kr/images/main/logo.png" width="220px"></div>
+        </a>
+        <br>
+        <br>
+        <br>
+      </header>
+    <section>
+     <div>
+                <tr>※회원구분을 위해 체크해 주세요</tr>
+                
+                <input type="radio" name="goode" value="STU" id="stu" class="blind">
+                <label for="stu">수강생</label>
+                <input type="radio" name="goode" value="NOR" id="nor" class="blind">
+                <label for="nor">일반회원</label>
+                
+                <form id="frm_login" method="post" action="/">
+                  <div>
+                    
+                    <input type="text" id="id" placeholder="아이디">
+                    <div id="msg_id"></div>
+                  </div>
+                  <div>
+                    <input type="password" id="pw" placeholder="●●●●">
+                    <div id="msg_pw"></div>
+                  </div>
+               
+                  <div>
+                    <button type="submit">로그인</button>
+                  </form>
+                  </div>
+                  <script>
+    
+                    $('#id').keyup(function(){
+                      var regId = /^[A-Za-z0-9]{4,}$/; 
+                        if(regId.test(this.value)){
+                          $('#msg_id').text('정상적인 아이디입니다.').addClass('good').removeClass('warning');
+                        } else{
+                          $('#msg_id').text('아이디는 4자 이상입니다.').addClass('warning').removeClass('good');
+                        }
+                        
+        
+                      })
+                      
+                      $('#frm_login').submit(function(event){
+                      if(!$('#msg_id').hasClass('good')){
+                        alert('아이디를 확인하세요.');
+                        event.preventDefault();
+                        return;
+                      }
+                    })
+
+                    $('#frm_login').submit(function(event){
+                    if(!$('#msg_pw').hasClass('good')){
+                    alert('비밀번호를 입력하세요');
+                    event.preventDefault();
+                    return;
+                    }
+             })
+   
+                     
+
+              </script>
+              </section>
+    <footer>
+                <button type="submit">회원가입</button>
+                <button type="submit">아이디/비밀번호 찾기</button>
+    </footer>
+    </div>
+    
+
+</body>
+</html>

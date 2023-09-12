@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../assets/js/lib/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  
+  <div id="box1">
+    <button id="btn1">XML요청임</button>
+  </div>
+  <script>
+    $('#btn1').click(function(){
+      $.ajax({
+        /* 요청 */
+        type: 'get',
+        url: 'product1.xml',
+        asymc: true,
+
+        /* 응답 */
+        dataType: 'xml',
+
+        success : function(resData){
+
+          var product = $(resData).find('product');
+          $.each(product, function(i, elem){
+
+            var ul = $('<ul>');
+
+            ul.append($('<li>').text($(elem).find('model').text()));  
+          })
+        }
+      })
+      $('box1').append(ul);''
+
+
+
+      })
+    })
+
+  </script>
+</body>
+</html>
