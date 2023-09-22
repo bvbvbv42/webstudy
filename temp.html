@@ -131,7 +131,7 @@
     // 아이디와 비밀번호의 입력이 없으면 submit 방지하기
     var id = $('#id').val();
     var pw = $('#pw').val();
-    if(id.length === 0 || pw.length === 0){
+    if(id.length === 0 || pw.length === 0){ // 아이디와 비밀번호가 아무것도없을때 진행
       alert('아이디와 비밀번호를 모두 입력하세요');
       event.preventDefault();
       return;

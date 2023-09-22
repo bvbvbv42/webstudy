@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div>
+    <button id="btn_open">열기</button>
+  </div>
+  <script>
+    var popup = null;
+
+    function openWindow(){    
+      var width = 320;
+      var height = 240;
+      var left = (screen.width - width) / 2;
+      var top = (screen.height - height) / 2;
+      var feature = 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top;
+      // popup이 열려 있지 않으면 popup을 연다.
+      if(popup === null || popup.closed){
+        popup = window.open('', '', feature);
+      }
+    }
+
+   
+
+    document.getElementById('btn_open').addEventListener('click', function(){
+      openWindow();
+  
+    })
+
+  </script>
+
+
+</body>
+</html>

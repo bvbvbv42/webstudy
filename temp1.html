@@ -16,11 +16,11 @@
     console.log($('#a').text());
   </script>
 
-  <style>
-    #b a {
-      text-decoration: none;
-    }
-  </style>
+<style>
+  #b a {
+    text-decoration: none;
+  }
+</style>
   <div id="b">
     <a href="https://www.naver.com/">네이버</a>
   </div>
@@ -35,10 +35,10 @@
     <input type="text">
   </div>
   <script>
-    // document.querySelector('#c input').value = '홍길동';                 // 객체.value : value 프로퍼티(객체 속성)
-    // document.querySelector('#c input').setAttribute('value', '아이유');  // 객체.setAttribute('value', '') : value 애트리뷰트(태그 속성)
-    // $('#c input').prop('value', '홍길동');
-    // $('#c input').attr('value', '아이유');
+     //document.querySelector('#c input').value = '홍길동';                 // 객체.value : value 프로퍼티(객체 속성)
+     //document.querySelector('#c input').setAttribute('value', '아이유');  // 객체.setAttribute('value', '') : value 애트리뷰트(태그 속성)
+     //$('#c input').prop('value', '홍길동');
+     //$('#c input').attr('value', '아이유');
     $('#c input').val('홍길동');  // 프로퍼티(not 애트리뷰트) 수정
   </script>
 
@@ -149,12 +149,9 @@
       var regId = /^[a-z0-9_-]{5,20}$/;  // 정규식 : 5 ~ 20자, 소문자, 숫자, 밑줄(_), 하이픈(-)
       if(regId.test(uId)){
         $('#msg_id').text('멋진 아이디네요.');
-      }else{
-        $('#msg_id').text('잘못된 아이디입니다.');
       }
     })
     
-  </script>
-
+</script>
 </body>
 </html>
